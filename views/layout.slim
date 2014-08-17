@@ -1,0 +1,49 @@
+doctype html
+html lang="en"
+  head
+    meta http-equiv="Content-Type" content="text/html; charset=utf-8"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="google-site-verification" content=""
+
+    meta name="author" content=""
+    meta name="keywords" content=""
+    meta name="description" content=""
+
+    link href="/favicon.ico" rel="shortcut icon" type="image/png"
+
+    link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'
+
+    link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"
+    link rel="stylesheet" type="text/css" href="/css/bootstrap-theme.min.css"
+    link rel="stylesheet" type="text/css" href="/css/styles.less"
+
+    script src="/js/modernizr.custom.js"
+    script src="/js/jquery.js"
+    script src="/js/bootstrap.min.js"
+
+    title
+
+    / GA
+    javascript:
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '', 'auto');
+      ga('send', 'pageview');
+
+  body class="#{@tpl}"
+
+    .container
+      ul.navigation
+        li: a href="/something" Something
+        li.dropdown
+          a href="#" class="dropdown-toggle" data-toggle="dropdown" Dropdown
+          ul.dropdown-menu
+            li: a href="/stuff" Stuff
+            li: a href="/other-stuff" Other Stuff
+
+    div.clear
+
+    == yield
